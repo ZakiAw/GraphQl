@@ -55,7 +55,7 @@ async function getData(){
         const total = xps
           .filter(xp => Reg.test(xp.path))
           .reduce((sum, xp) => sum + xp.amount, 0);
-        const KbXp = ((total + 70000) / 1000).toFixed(0);
+        let KbXp = ((total + 70000) / 1000).toFixed(0);
 
         let am = 'KB';
         if (KbXp >= 1000) {
